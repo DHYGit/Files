@@ -1,0 +1,68 @@
+执行升级脚本：0_copy_Image.sh
+
+播放音乐：2_audio.sh
+左声道：14_speaker_left_channel.sh
+右声道：15_speaker_right_channel.sh
+音量调节没有对应的脚本，直接执行的命令
+静音：amixer -c 1 set Master 0%  
+音量减：amixer -c 1 set Master 5%-
+音量加：amixer -c 1 set Master 5%+
+最大音：amixer -c 1 set Master 100%
+
+开始录音：4_record.sh
+播放录音没有对应的脚本，直接执行的命令
+播放录音：(1)cd /home/ubuntu/hardware_test/   (2)aplay -r 16000 -f S16_LE -c 2 Sound_Pi_0.pcm
+
+
+电机控制：11_motor.sh
+左移：在控制台输入'1'
+右移：在控制台输入'2'
+停止：在控制台输入"stop"(只要不包含数字1和2就可以)
+电机自动测试：38_motor_auto.sh
+停止电机自动测试：39_motor_stop.sh
+
+旋转电机控制：8_attmotor.sh
+左转：在控制台输入'1'
+右转：在控制台输入'2'
+停止：在控制台输入"stop"(只要不包含数字1和2就可以)
+
+打开风扇：9_fanmotor.sh
+充气控制：10_gasmotor.sh
+开：在控制台输入'1'
+关：在控制台输入"stop"
+
+流水灯：28_Test_single_led.sh
+流水灯New：此按钮暂时没有执行脚本和命令，无功能
+打开红灯：16_RGB_red.sh
+打开绿灯：17_RGB_green.sh
+打开蓝灯：18_RGB_blue.sh
+
+所有灯：3_led.sh
+所有灯New：此按钮暂时没有执行脚本和命令，无功能
+暖色灯：19_LED_warm.sh
+冷色灯：20_LED_cool.sh
+关灯：21_LED_off.sh
+
+Camera0测试：30_save_raw_image_0.sh
+Camera1测试：31_save_raw_image_1.sh
+Camera2测试：32_save_raw_image_2.sh
+Camera3测试：33_save_raw_image_3.sh
+
+看直播界面：
+Camera0：54_Play_Camera_0.sh
+Camera1：55_Play_Camera_1.sh
+Camera2：56_Play_Camera_2.sh
+Camera3: 57_Play_Camera_3.sh
+
+获取亮度：6_lightsensor.sh
+
+距离测试：5_distance.sh
+
+升级界面：
+上传文件：通过PSCP.exe将升级包传到/home/ubuntu/，并命名为hardware_test.tar.gz
+解压升级：解压该压缩包，解压完后进入/home/ubuntu/hardware_test/执行0_copy_Image.sh
+
+串口1测试：12_stm32_uart1.sh
+串口2测试：13_stm32_uart2.sh
+获取压力值：27_getpressure.sh
+人体感应测试：22_test_pir.sh
